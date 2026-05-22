@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("bhackground.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+    
+    
+
+
+
+
+/* Envelope Screen */
+#envelope-container {
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#envelope-container p {
+    color: white;
+    position: relative;
+    left: 45px;
+    top: -110px;
+    font-size: 55px;
+}
+
+@keyframes pulse {
+    0% {
+        transform:scale(1);
+
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+
+    }
+
+}
+
+#envelope{
+    width: 400px;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+
+    position: relative;
+    left: 45px;
+
+}
+
+#letter-container{
+    display:none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.letter-window{
+    width: 90vw;
+    max-width:800px;
+    aspect-ratio: 3/2;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("insidenvelopewindow-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    gap: 1px;
+    padding-top: 180px;
+
+    transform: scale(1.2);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+
+   
+
+}
+
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+
+}
+
+h1 {
+    font-size: 39px;
+    margin:0;
+
+    position: relative;
+    top: 4px;
+    left: 142px;
+    width: 200px;
+
+    transform: rotate(29deg);
+}
+
+p{
+    font-size: 40px;
+}
+
+/* Orca */
+
+.orca{
+    width: 200px;
+    margin: 10px 0;
+    transition: width 0.4s ease; 
+
+    position: relative;
+    top: 7px;
+    left: 45px;
+
+}
+
+.letter-window.final .orca{
+    width: 180px;
+
+}
+
+.final-text{
+    font-size:22px;
+    line-height: 1.4;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 12px;
+
+}
+
